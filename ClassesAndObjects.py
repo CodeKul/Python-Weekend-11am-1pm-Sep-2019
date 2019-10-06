@@ -1,10 +1,16 @@
 class MyClass:
 
-    def __init__(self, prop1, prop2):
-        self.prop1 = prop1
-        self.prop2 = prop2
-        print('__init__')
+    # def __init__(self, prop1, prop2):
+    #     self.prop1 = prop1
+    #     self.prop2 = prop2
+    #     print('__init__')
 
+    prop1 = 0
+    prop2 = 0
+
+    def __init__(self):
+        pass
+    
     def display(self):
         print('Prop1: ',self.prop1)
         print('Prop2: ',self.prop2)
