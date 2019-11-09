@@ -39,6 +39,17 @@ class Manager(Employee):
         print('manager is releasing the project')
 
 
+class Company:
+    def __init__(self, name, employees):
+        self.name = name
+        self.employees = employees
+
+    def info(self):
+        print('Name:', self.name)
+        for emp in self.employees:
+            print(type(emp))
+            emp.display()
+
 dev1 = Developer(1, 'ABC', 1000, 10)
 dev1.display()
 dev1.build_project()
@@ -47,7 +58,10 @@ man1 = Manager(3, 'PQR', 3000, 100)
 man1.display()
 man1.release_project()
 
-emp1 = Employee(2, 'XYZ', 2000)
-emp1.display()
-emp1.build_project()
-emp1.release_project()
+# emp1 = Employee(2, 'XYZ', 2000)
+# emp1.display()
+# emp1.build_project()
+# emp1.release_project()
+
+com = Company('ABC', [dev1, man1])
+com.info()
